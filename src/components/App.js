@@ -8,12 +8,13 @@ console.log("Here's the data you're working with");
 console.log({ CATEGORIES, TASKS });
 
 function App() {
+  
   return (
     <div className="App">
       <h2>My tasks</h2>
-      <CategoryFilter />
-      <NewTaskForm />
-      <TaskList />
+      <CategoryFilter category={CATEGORIES} />
+      <NewTaskForm category1={CATEGORIES} />
+      <TaskList tasks={TASKS} />
     </div>
   );
 }
